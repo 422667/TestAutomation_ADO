@@ -3,8 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.salesforce.testcases.TC001_Login_Cucumber"/>
-      <class name="com.salesforce.testcases.TC002_CreateLead_Cucumber"/>
+      <class name="com.salesforce.testcases.TC001_Signup_Cucumber"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
