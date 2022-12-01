@@ -18,35 +18,7 @@ public class SignupPage extends ProjectSpecificMethods{
 		return this;
 	}
 
-	@Given("User enter the Lastname as {string}")
-	public SignupPage user_enter_the_Lastname_as(String data) {
-		clearAndType(locateElement(Locators.ID, "lastName"), data);
-		reportStep(data+" entered successfully","pass");
-		return this;
-		
-	}
-
-	@Given("User enter the username as {string}")
-	public SignupPage user_enter_the_username_as(String data) {
-		clearAndType(locateElement(Locators.ID, "username"), data);
-		reportStep(data+" entered successfully","pass");
-		return this;
-	}
-
-	@Given("User enter the password as {string}")
-	public SignupPage user_enter_the_password_as(String data) {
-		clearAndType(locateElement(Locators.NAME, "Passwd"), data);
-		reportStep(data+" entered successfully","pass");
-		return this;
-	}
-
-	@Given("User enter the confirm password as {string}")
-	public SignupPage user_enter_the_confirm_password_as(String data) {
-		clearAndType(locateElement(Locators.NAME, "ConfirmPasswd"), data);
-		reportStep(data+" entered successfully","pass");
-		return this;
-	}
-
+	
 	@Given("User click on the checkbox")
 	public SignupPage user_click_on_the_checkbox() {
 	   click(locateElement(Locators.XPATH, "//input[@type='checkbox']"));
@@ -63,7 +35,39 @@ public class SignupPage extends ProjectSpecificMethods{
 
 
 
-	
+	@When("User enters the FirstName as {string}")
+	public SignupPage user_enters_the_FirstName_as(String data) {
+
+		clearAndType(locateElement(Locators.ID, "firstName"), data);
+		reportStep(data+" entered successfully","pass");
+		return this;
+		
+	}
+
+	@When("User enters the LastName as {string}")
+	public SignupPage user_enters_the_LastName_as(String data) {
+		clearAndType(locateElement(Locators.ID, "lastName"), data);
+		reportStep(data+" entered successfully","pass");
+		return this;
+	}
+
+	@When("User enters the password as {string}")
+	public SignupPage user_enters_the_password_as(String string) {
+		
+		clearAndType(locateElement(Locators.NAME, "Passwd"), string);
+		reportStep(string+" entered successfully","pass");
+		return this;
+	   
+	}
+
+	@When("User click on the Checkbox")
+	public SignupPage user_click_on_the_Checkbox() {
+		
+		click(locateElement(Locators.XPATH, "//input[@type='checkbox']"));
+		reportStep("checkbox Button clicked successfully","pass");
+		return this;
+	  
+	}
 	
 	
 
