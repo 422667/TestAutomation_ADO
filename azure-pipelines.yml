@@ -15,7 +15,7 @@ parameters:
 trigger:
   - main
 pool:
-  name: "windows-agents-pool"
+  name: "windows-pool-100thbatch"
   
 steps:
   - task: Maven@3
