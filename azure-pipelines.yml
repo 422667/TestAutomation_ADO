@@ -31,7 +31,6 @@ steps:
     condition: succeededOrFailed()
     displayName: "ProjectA Test Results"
   
-
   - task: CopyFiles@2
     displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
     inputs:
@@ -39,7 +38,6 @@ steps:
       Contents: '**/target/**'
       TargetFolder: '$(build.artifactstagingdirectory)'
     condition: succeededOrFailed()
-
   - task: CopyFiles@2
     displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
     inputs:
